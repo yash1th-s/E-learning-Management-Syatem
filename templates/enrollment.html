@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Enrollments
+{% endblock title %}
+
+{% block body %}
+
+<br>
+<br>
+<br>
+
+{% include "message.html" %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 jumbotron">
+            <h4 class="text-center bg-success text-white">Enrollment</h4> <br>
+            <form action="/enrollment" method="POST">
+
+                <div class="form-group">
+                    <label for="cid">Select Course</label><br>
+                    <select id="cid" name="cid" >
+                      <option value="" disabled selected hidden>Select your option</option>
+                      <option value="FCS01">Scratch</option>
+                      <option value="FCS02">Roblox</option>
+                      <option value="FCS03">Python</option>
+                      <option value="FCS04">Communication</option>
+                      <option value="FCS05">Java</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollmentdate">Date</label>
+                    <input type="date" class="form-control" id="enrollmentdate" placeholder="Enter today's date" name="enrollmentdate" required>
+                </div>
+
+                
+
+                <button type="submit" class="btn btn-success mt-3">Enroll</button>
+            </form>
+
+</div>
+</div>
+</div>
+
+{% endblock  %}

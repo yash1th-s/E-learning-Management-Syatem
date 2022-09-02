@@ -1,0 +1,60 @@
+{% extends 'tbase.html' %}
+
+{% block title %}
+Marks Update
+{% endblock title %}
+
+{% block body %}
+<br>
+<br>
+<br>
+
+    {% include "message.html" %}
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 jumbotron">
+                <h4 class="text-center bg-success text-white">Update Marks</h4> <br>
+                <form action="/marksupdate" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="sid">SID</label>
+                        <input type="text" class="form-control" id="sid" placeholder="Enter Student id" name="sid" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cid">Select Course</label><br>
+                        <select id="cid" name="cid" >
+                          <option value="" disabled selected hidden>Select your option</option>
+                          <option value="FCS01">Scratch</option>
+                          <option value="FCS02">Roblox</option>
+                          <option value="FCS03">Python</option>
+                          <option value="FCS04">Communication</option>
+                          <option value="FCS05">Java</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asgmt1">Assignmment 1</label>
+                        <input type="number" class="form-control" id="asgmt1" placeholder="Marks" name="asgmt1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asgmt2">Assignmment 2</label>
+                        <input type="number" class="form-control" id="asgmt2" placeholder="Marks" name="asgmt2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asgmt3">Assignmment 3</label>
+                        <input type="number" class="form-control" id="asgmt3" placeholder="Marks" name="asgmt3" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-3">Update</button>
+                </form>
+
+</div>
+</div>
+    </div>
+        
+{% endblock  %}

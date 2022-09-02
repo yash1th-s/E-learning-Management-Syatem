@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Student Signup
+{% endblock title %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+
+<div class="container mt-3">
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 jumbotron">
+        <h4 class="text-center bg-success text-white">Sign Up Here</h4> <br>
+        {% include "message.html" %}
+        <form action="/studentsignup" method="POST">
+            <div class="form-group">
+              <label for="username">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="UserName" name="name" required>
+              
+            </div>
+            <div class="form-group">
+                <label for="username">Phone</label>
+                <input type="tel" class="form-control" pattern="[0-9]{10}" id="phone" placeholder="Phone" name="phone" required>
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="dob">DOB</label>
+                <input type="date" class="form-control far fa-calendar-alt" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">City</label>
+                <input type="text" class="form-control" id="city" placeholder="city" name="city" required>
+                
+            </div>
+            
+
+            <div class="form-group mt-2">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+
+            <div class="form-group mt-2">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+            </div>
+        
+            <button type="submit" class="btn btn-success mt-3">Signup</button>
+        </form>
+        <br>
+        Already a user ? <a href="/studentlogin">Login</a>
+    </div>
+    
+
+    <div class="col-md-4"></div>
+</div>
+</div>
+
+
+
+{% endblock  %}

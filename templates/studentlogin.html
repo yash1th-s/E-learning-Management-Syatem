@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Student Login
+{% endblock title %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 ">
+            <h4 class="text-center bg-success text-white">Student Login</h4> <br>
+            
+            
+            <form action="/studentlogin" method="POST">
+                {% include "message.html" %}
+                <div class="form-group mt-2">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                </div>
+    
+    
+                <div class="form-group mt-2">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                </div>
+            
+                <button type="submit" class="btn btn-success mt-3">Login</button>
+            </form>
+            <br>
+            Not a user ? <a href="/studentsignup"> Signup</a>
+        </div>
+        
+    
+        <div class="col-md-4"></div>
+    </div>
+    </div>
+    
+{% endblock body %}

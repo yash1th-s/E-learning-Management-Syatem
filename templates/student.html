@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Student 
+{% endblock  %}
+
+{% block body %}
+<br>
+<br>
+<br>
+  {% include "message.html" %}
+
+  <!--h1> Hello {{name}}!<h1-->
+    <div class="section-title">
+      <p>Hello {{name}}!</p>
+    </div>
+    <br>
+    <font size="4.5">
+      <style>
+        div {
+          background-image: url('static\assets\img\background.jpg');
+        }
+        </style>
+        <div class="col-md-8" style="margin:0 auto;">
+        <table class="table table-success style="border:1px solid black;margin-left:auto;margin-right:auto;" >
+            <thead>
+              <h3 class="text-center text-white bg-success">Time Table</h3>
+                <tr>
+                    <th scope="col">Course ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Timings:</th>
+                    <th scope="col">Unenrollment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+
+                      {% for course in coursedata %}
+                      <tr>
+                        <th scope="col">{{course.cid}}</th>
+                        <td scope="cl">{{course.name}}</td>
+                        <td scope="col">{{course.duration}}</td>
+                        <td scope="col">{{course.description}}</td>
+                        <td>
+                          <form action="/student" method="post">
+                              <div class="form-group">
+                                <a href="#popup1" class="btn">Un-enroll</a>
+                                <div id="popup1" class="popup">
+                                  <a href="#" class="close">&times;</a>
+                                  <h2>Confirmation</h2>
+                                  <p>Are you sure you want to unenroll from the course?</p>
+                                  <button type="submit" class="btn btn-success" value={{course.cid}} name="cid">Yes</button>
+                                </div>
+                                <a href="#" class="close-popup"></a>
+                              </div>
+                          </form>
+                      </td>
+                        {% endfor %}
+                      </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <br style="clear: both;">
+    <div class="col-md-10" style="margin:0 auto;">
+      <table class="table table-success style="border:1px solid black;margin-left:auto;margin-right:auto;" >
+          <thead>
+            <h3 class="text-center text-white bg-success">Assessment Marks</h3>
+              <tr>
+                  <th scope="col">Course ID</th>
+                  <th scope="col">Asgmt 1</th>
+                  <th scope="col">Asgmt 2</th>
+                  <th scope="col">Asgmt 3</th>
+                  <th scope="col">Final Marks</th>
+                  <th scope="col">Remarks</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              
+
+                    {% for a,b,c,d,e,f in res %}
+                    <tr>
+                      <th scope="col">{{a}}</th>
+                      <td scope="cl">{{b}}</td>
+                      <td scope="col">{{c}}</td>
+                      <td scope="col">{{d}}</td>
+                      <td scope="col">{{e}}</td>
+                      <td scope="col">{{f}}</td>
+                      {% endfor %}
+                    </tr>
+          </tbody>
+      </table>
+
+</font>
+</div>
+    <br style="clear: both;">
+    <h2><a href="/profileupdate">Update Your Profile </a></h2>
+  </div>
+
+  <main id="main">
+
+  <section id="popular-courses" class="courses">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Courses</h2>
+        <p>Popular Courses</p>
+      </div>
+
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="course-item">
+            <img src="static/assets\img\scratch.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Scratch</h4>
+              </div>
+
+              <h3><a href="https://scratch.mit.edu/">Intro to Scratch programming</a></h3>
+              <p>Scratch is a free programming language and online community where you can create your own interactive stories, games, and animations.</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <span>Yashwanth S</span>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;50
+                  &nbsp;&nbsp;
+                  <i class="bx bx-heart"></i>&nbsp;65
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="course-item">
+            <img src="static/assets/img/roblox.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Roblox</h4>
+              </div>
+
+              <h3><a href="https://www.roblox.com/create">Roblox Game Development</a></h3>
+              <p>Create anything you can imagine with Roblox's free and immersive creation engine. Start creating experiences today!</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <span>Kusuma</span>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;35
+                  &nbsp;&nbsp;
+                  <i class="bx bx-heart"></i>&nbsp;42
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="course-item">
+            <img src="static/assets/img/python.jpeg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Python</h4>
+              </div>
+
+              <h3><a href="https://www.python.org/">Intro to Python programming</a></h3>
+              <p>Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis.</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <span>Harshith</span>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;20
+                  &nbsp;&nbsp;
+                  <i class="bx bx-heart"></i>&nbsp;85
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+      </div>
+
+    </div>
+  </section><!-- End Popular Courses Section -->
+
+
+</main><!-- End #main -->
+
+
+{% endblock  %}

@@ -1,0 +1,183 @@
+{% extends 'tbase.html' %}
+
+{% block title %}
+Tutor
+{% endblock title %}
+
+
+{% block body %}
+<br>
+<br>
+<br>
+</h1>
+
+{% include "message.html" %}
+
+    <h1> Hello Instructor!<h1>
+
+
+        <font size="4.5"> 
+    
+            <div class="contaier mt-8">
+                
+                    <div class="col-md-6">
+            
+                        <div class="form">
+                            <br>
+                            <div class="section-title">
+                                <p>Student Details</p>
+                              </div>
+                            <div >
+                                <form action="/tutor" method="post">
+                                    <div class="form-group">
+                                        <label for="cid">Select Course</label>
+                                        <select id="cid" name="cid" >
+                                        <option value="" disabled selected hidden>Select your option</option>
+                                        <option value="FCS01">Scratch</option>
+                                        <option value="FCS02">Roblox</option>
+                                        <option value="FCS03">Python</option>
+                                        <option value="FCS04">Communication</option>
+                                        <option value="FCS05">Java</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Enter</button>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+            
+                    </div>
+                    <div class="col-md-8">
+                        <div style="float: left;margin-right:10px">
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Student ID</th>
+                                    <th scope="col">Course ID</th>
+                                    <th scope="col">Enrollment Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                
+            
+                                        {% for enrollment in enrollmentdata %}
+                                      <tr>
+                                        <th scope="col">{{enrollment.sid}}</th>
+                                        <td scope="cl">{{enrollment.cid}}</td>
+                                        <td scope="col">{{enrollment.enrollmentdate}}</td>
+                                        {% endfor %}
+                                      </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="float: left">
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                
+            
+                                        {% for student in studentdata %}
+                                      <tr>
+                                        <td scope="col">{{student.name}}</td>
+                                        <td scope="cl">{{student.email}}</td>
+                                        <td scope="col">{{student.phone}}</td>
+                                        {% endfor %}
+                                      </tr>
+                            </tbody>
+                        </div>
+                        </table>
+                    </div>          
+                                
+                            
+            </div>
+            
+               
+            
+
+    </font>
+
+</div>
+    
+    <br style="clear: both;">
+    <br>
+
+        <a href="/marksupdate">Update Student Assessment Marks </a>(click here)
+        <br>
+        <br>
+</div>
+
+        <div class="col-md-8" style="margin:0 auto;">
+        <font size="3">
+        <table class="table table-success style="border:1px solid black;margin-left:auto;margin-right:auto;">
+          <thead>
+            <h3 class="text-center text-white bg-success">Triggred Data</h3>
+            <tr>
+              <th scope="col">Sl No</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Course ID</th>
+              <th scope="col">Activty</th>
+              <th scope="="col>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for trig in trigdata %}
+            <tr>
+              <td>{{trig.id}}</td>
+              <td>{{trig.sid}}</td>
+              <td>{{trig.cid}}</td>
+              <td>{{trig.action}}</td>
+              <td>{{trig.date}}</td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </font>
+        
+
+        <font size="3">
+
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+              <br>
+              <br>
+      
+              <div class="section-title">
+                <h2>Info</h2>
+                <p>About Us</p>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                  <img src="static/assets/img/about.png" class="img-fluid" alt="...">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                  <h3>BRINGING FREE AND OPEN LEARNING TO ANYONE INTRESTED TO LEARN CS</h3><br>
+                  <p>We focus on building sustainable Computer Science courese with a proven curriculum for high school students by pairing school teachers with CS grade 
+                    students and tech professionals in the local community.
+                  </p>
+                  <br>
+      
+                  <p>
+                    A simple mission to close the Computer Science gap in high schools and local communities.<br><br>
+                    We partner with schools/ organizations around the world to make sustainable CS curiculum accessible for high school 
+                    students in our local communities.
+                  </p>
+      
+                </div>
+              </div>
+      
+            </div>
+          </section><!-- End About Section -->
+        </font>
+        <br>
+ 
+{% endblock body %}

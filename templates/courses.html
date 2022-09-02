@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Courses
+{% endblock title %}
+
+{% block body %}
+
+{% if current_user.is_authenticated %} 
+
+<main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h2>Courses</h2>
+        <p>FreecodingSchool provides a network of volunteers from top companies and universities to help high schools create sustainable CS and digital education programs in their local community. We connect classroom teachers with our generous volunteers, through remote and classroom learning.</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <section id="courses" class="courses">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="course-item">
+                <img src="static/assets\img\scratch.jpg" class="img-fluid" alt="...">
+                <div class="course-content">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4>Scratch</h4>
+                  </div>
+  
+                  <h3><a href="/enrollment">Intro to Scratch programming</a></h3>
+                  <p>Scratch is a free programming language and online community where you can create your own interactive stories, games, and animations.</p>
+                  <div class="trainer d-flex justify-content-between align-items-center">
+                    <div class="trainer-profile d-flex align-items-center">
+                      <span>Yashwanth S</span>
+                    </div>
+                    <div class="trainer-rank d-flex align-items-center">
+                      <i class="bx bx-user"></i>&nbsp;50
+                      &nbsp;&nbsp;
+                      <i class="bx bx-heart"></i>&nbsp;65
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- End Course Item-->
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="course-item">
+                  <img src="static/assets/img/roblox.jpg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h4>Roblox</h4>
+                    </div>
+    
+                    <h3><a href="/enrollment">Roblox Game Development</a></h3>
+                    <p>Create anything you can imagine with Roblox's free and immersive creation engine. Start creating experiences today!</p>
+                    <div class="trainer d-flex justify-content-between align-items-center">
+                      <div class="trainer-profile d-flex align-items-center">
+                        <span>Kusuma</span>
+                      </div>
+                      <div class="trainer-rank d-flex align-items-center">
+                        <i class="bx bx-user"></i>&nbsp;35
+                        &nbsp;&nbsp;
+                        <i class="bx bx-heart"></i>&nbsp;42
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="course-item">
+                  <img src="static/assets/img/python.jpeg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h4>Python</h4>
+                    </div>
+    
+                    <h3><a href="/enrollment">Intro to Python programming</a></h3>
+                    <p>Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis.</p>
+                    <div class="trainer d-flex justify-content-between align-items-center">
+                      <div class="trainer-profile d-flex align-items-center">
+                        <span>Harshith</span>
+                      </div>
+                      <div class="trainer-rank d-flex align-items-center">
+                        <i class="bx bx-user"></i>&nbsp;20
+                        &nbsp;&nbsp;
+                        <i class="bx bx-heart"></i>&nbsp;85
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="course-item">
+                  <img src="static/assets/img/communication.jpg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h4>Communication</h4>
+                    </div>
+    
+                    <h3><a href="/enrollment">Communication Skills</a></h3>
+                    <p>Communication skills allow you to understand and be understood by others. These can include but are not limited to effectively communicating ideas to others, actively listening in conversations, giving and receiving critical feedback and public speaking.</p>
+                    <div class="trainer d-flex justify-content-between align-items-center">
+                      <div class="trainer-profile d-flex align-items-center">
+                        <span>Lahari</span>
+                      </div>
+                      <div class="trainer-rank d-flex align-items-center">
+                        <i class="bx bx-user"></i>&nbsp;20
+                        &nbsp;&nbsp;
+                        <i class="bx bx-heart"></i>&nbsp;85
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="course-item">
+                  <img src="static/assets/img/java.jpg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h4>Java</h4>
+                    </div>
+    
+                    <h3><a href="/enrollment">Intro to Java programming</a></h3>
+                    <p>Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.</p>
+                    <div class="trainer d-flex justify-content-between align-items-center">
+                      <div class="trainer-profile d-flex align-items-center">
+                        <span>Lasya</span>
+                      </div>
+                      <div class="trainer-rank d-flex align-items-center">
+                        <i class="bx bx-user"></i>&nbsp;20
+                        &nbsp;&nbsp;
+                        <i class="bx bx-heart"></i>&nbsp;85
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+    
+            </div>
+    
+          </div>
+        </section>
+
+        {% else %}
+
+        <main id="main" data-aos="fade-in">
+
+            <!-- ======= Breadcrumbs ======= -->
+            <div class="breadcrumbs">
+              <div class="container">
+                <h2>Courses</h2>
+                <p>FreecodingSchool provides a network of volunteers from top companies and universities to help high schools create sustainable CS and digital education programs in their local community. We connect classroom teachers with our generous volunteers, through remote and classroom learning.</p>
+              </div>
+            </div><!-- End Breadcrumbs -->
+        
+            <section id="courses" class="courses">
+                <div class="container" data-aos="fade-up">
+          
+                  <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                      <div class="course-item">
+                        <img src="static/assets\img\scratch.jpg" class="img-fluid" alt="...">
+                        <div class="course-content">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4>Scratch</h4>
+                          </div>
+          
+                          <h3><a href="/studentlogin">Intro to Scratch programming</a></h3>
+                          <p>Scratch is a free programming language and online community where you can create your own interactive stories, games, and animations.</p>
+                          <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                              <span>Yashwanth S</span>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                              <i class="bx bx-user"></i>&nbsp;50
+                              &nbsp;&nbsp;
+                              <i class="bx bx-heart"></i>&nbsp;65
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- End Course Item-->
+        
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                        <div class="course-item">
+                          <img src="static/assets/img/roblox.jpg" class="img-fluid" alt="...">
+                          <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <h4>Roblox</h4>
+                            </div>
+            
+                            <h3><a href="/studentlogin">Roblox Game Development</a></h3>
+                            <p>Create anything you can imagine with Roblox's free and immersive creation engine. Start creating experiences today!</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                              <div class="trainer-profile d-flex align-items-center">
+                                <span>Kusuma</span>
+                              </div>
+                              <div class="trainer-rank d-flex align-items-center">
+                                <i class="bx bx-user"></i>&nbsp;35
+                                &nbsp;&nbsp;
+                                <i class="bx bx-heart"></i>&nbsp;42
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- End Course Item-->
+            
+                      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="course-item">
+                          <img src="static/assets/img/python.jpeg" class="img-fluid" alt="...">
+                          <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <h4>Python</h4>
+                            </div>
+            
+                            <h3><a href="/studentlogin">Intro to Python programming</a></h3>
+                            <p>Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                              <div class="trainer-profile d-flex align-items-center">
+                                <span>Harshith</span>
+                              </div>
+                              <div class="trainer-rank d-flex align-items-center">
+                                <i class="bx bx-user"></i>&nbsp;20
+                                &nbsp;&nbsp;
+                                <i class="bx bx-heart"></i>&nbsp;85
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- End Course Item-->
+        
+                      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="course-item">
+                          <img src="static/assets/img/communication.jpg" class="img-fluid" alt="...">
+                          <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <h4>Communication</h4>
+                            </div>
+            
+                            <h3><a href="/studentlogin">Communication Skills</a></h3>
+                            <p>Communication skills allow you to understand and be understood by others. These can include but are not limited to effectively communicating ideas to others, actively listening in conversations, giving and receiving critical feedback and public speaking.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                              <div class="trainer-profile d-flex align-items-center">
+                                <span>Lahari</span>
+                              </div>
+                              <div class="trainer-rank d-flex align-items-center">
+                                <i class="bx bx-user"></i>&nbsp;20
+                                &nbsp;&nbsp;
+                                <i class="bx bx-heart"></i>&nbsp;85
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- End Course Item-->
+        
+                      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="course-item">
+                          <img src="static/assets/img/java.jpg" class="img-fluid" alt="...">
+                          <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <h4>Java</h4>
+                            </div>
+            
+                            <h3><a href="/studentlogin">Intro to Java programming</a></h3>
+                            <p>Java is a popular programming language. Java is used to develop mobile apps, web apps, desktop apps, games and much more.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                              <div class="trainer-profile d-flex align-items-center">
+                                <span>Lasya</span>
+                              </div>
+                              <div class="trainer-rank d-flex align-items-center">
+                                <i class="bx bx-user"></i>&nbsp;20
+                                &nbsp;&nbsp;
+                                <i class="bx bx-heart"></i>&nbsp;85
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- End Course Item-->
+            
+                    </div>
+            
+                  </div>
+                </section>
+
+                {% endif %}
+        
+{% endblock  %}
